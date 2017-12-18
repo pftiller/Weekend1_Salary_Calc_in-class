@@ -21,6 +21,7 @@ function submitClick() {
   $('#output').append(row);
   averageSalary += salary / 12;
   $('#averageSalary').html('<strong>' + averageSalary + '</strong>');
+  $('#inputs input').val('');
 }
 function deleteRow(){
   var empSalary = $(this).closest('tr').find('.tdSalary').text();
