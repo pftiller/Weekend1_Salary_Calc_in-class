@@ -8,4 +8,5 @@ $('#submitBtn').on('click', submitClick);
 function submitClick() {
   var salary = $('#salary').val();
   console.log('button clicked:', salary);
+  $('#output').append('<p>' + salary + '</p>');
 }
