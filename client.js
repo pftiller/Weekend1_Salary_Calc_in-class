@@ -14,7 +14,7 @@ function submitClick() {
   row.append('<td>' + $('#first').val() + '</td>');
   row.append('<td>' + $('#last').val() + '</td>');
   row.append('<td>' + $('#title').val() + '</td>');
-  row.append('<td>' + $('#salary').val() + '</td>');
+  row.append('<td class="tdSalary">' + $('#salary').val() + '</td>');
   row.append('<td>' + $('#empID').val() + '</td>');
   row.append('<td><button class="delete">Delete</button></td>');
   console.log('button clicked:', salary);
@@ -23,5 +23,7 @@ function submitClick() {
   $('#averageSalary').html('<strong>' + averageSalary + '</strong>');
 }
 function deleteRow(){
+  var empSalary = $(this).closest('tr').find('.tdSalary').text();
+  empSalary = averageSalary -= empSalary /12;
   $(this).closest('tr').remove();
 }
